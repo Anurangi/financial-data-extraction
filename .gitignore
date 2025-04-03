@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*$py.class
+env/
+env_financial_data_extraction/
+venv/
+ENV/
