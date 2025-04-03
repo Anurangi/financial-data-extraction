@@ -1,0 +1,252 @@
+2025-04-03 14:54:48,082 - INFO - Fetching quarterly reports for REXP (REXP.N0000)...
+2025-04-03 14:54:48,082 - INFO - ====== WebDriver manager ======
+2025-04-03 14:54:49,147 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-03 14:54:49,322 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-03 14:54:49,701 - INFO - Driver [C:\Users\Akshila.Anurangi\.wdm\drivers\chromedriver\win64\134.0.6998.165\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-03 14:55:01,031 - INFO - Found 20 PDF reports for REXP.
+2025-04-03 14:55:03,475 - INFO - Downloaded: 10_Feb_202504_41_PM_Interim_Financial_Statements_as_at_31-12-2024.pdf
+2025-04-03 14:55:04,608 - INFO - Downloaded: 06_Nov_202405_13_PM_Interim_Financial_Statements_as_at_30-09-2024.pdf
+2025-04-03 14:55:05,690 - INFO - Downloaded: 31_Jul_202404_36_PM_Interim_Financial_Statements_as_at_30-06-2024.pdf
+2025-04-03 14:55:06,619 - INFO - Downloaded: 31_May_202407_41_PM_Interim_Financial_Statements_as_at_31.03.2024.pdf
+2025-04-03 14:55:07,368 - INFO - Downloaded: 15_Feb_202404_54_PM_Interim_Financial_Statements_as_at_31.12.2023.pdf
+2025-04-03 14:55:08,044 - INFO - Downloaded: 15_Nov_202305_25_PM_Interim_Financial_Statements_as_at_30.09.2023.pdf
+2025-04-03 14:55:09,676 - INFO - Downloaded: 15_Aug_202302_47_PM_Interim_Financial_Statement_First_Quater_-2023-_Richard_Pieris_Exports_PLC.pdf
+2025-04-03 14:55:12,696 - INFO - Downloaded: 31_May_202303_28_PM_Interim_Financial_Statement_Fourth_Quater_-2022_2023.pdf
+2025-04-03 14:55:13,438 - INFO - Downloaded: 15_Feb_202303_13_PM_Interim_Financial_Statement_Third_Quater_-2022_2023.pdf
+2025-04-03 14:55:14,202 - INFO - Downloaded: 14_Nov_202203_10_PM_Interim_Financial_Statement_Second_Quater_-2022_-RPE.pdf
+2025-04-03 14:55:55,739 - INFO - Downloaded: 15_Aug_202205_18_PM_Interim_Financial_Statements_as_of_30-06-2022.pdf
+2025-04-03 14:55:59,306 - INFO - Downloaded: 14_Feb_202204_26_PM_Interim_Financial_Statements_-03rd_Quarter_2021_2022.pdf
+2025-04-03 14:56:11,708 - INFO - Downloaded: 12_Nov_202104_32_PM_Interim_Financial_Statements_as_of_30_09_2021.pdf
+2025-04-03 14:56:18,716 - INFO - Downloaded: 11_Aug_202103_16_PM_Interim_Financial_Statements_-01st_Quarter_30th_June_2021.pdf
+2025-04-03 14:56:27,738 - INFO - Downloaded: 31_May_202103_16_PM_Interim_Financial_Statements_-04th_Quarter.pdf
+2025-04-03 14:56:29,733 - INFO - Downloaded: 11_Feb_202103_25_PM_Quarterly_Financial_Report_as_of_12_31_2020.pdf
+2025-04-03 14:56:30,951 - INFO - Downloaded: 13_Nov_202003_14_PM_Quarterly_Financial_Report_as_of_30_09_2020.pdf
+2025-04-03 14:56:31,858 - INFO - Downloaded: 14_Aug_202003_24_PM_Quarterly_Financial_Report_as_of_30_06_2020.pdf
+2025-04-03 14:56:32,760 - INFO - Downloaded: 14_Aug_202003_22_PM_Quarterly_Financial_Report_as_of_31_03_2020.pdf
+2025-04-03 14:56:33,746 - INFO - Downloaded: 12_Feb_202003_18_PM_Interim_Financial_Statements_as_at_31.12.2019.pdf
+2025-04-03 14:56:34,253 - INFO - Processing PDFs in reports\REXP
+2025-04-03 14:56:34,253 - INFO - Processing reports\REXP\06_Nov_202405_13_PM_Interim_Financial_Statements_as_at_30-09-2024.pdf
+2025-04-03 14:56:34,277 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\06_Nov_202405_13_PM_Interim_Financial_Statements_as_at_30-09-2024.pdf
+2025-04-03 14:56:34,277 - INFO - Text successfully extracted from relevant pages in reports\REXP\06_Nov_202405_13_PM_Interim_Financial_Statements_as_at_30-09-2024.pdf
+2025-04-03 14:56:34,277 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,277 - INFO - Extracted text written to reports\REXP\06_Nov_202405_13_PM_Interim_Financial_Statements_as_at_30-09-2024.txt
+2025-04-03 14:56:34,277 - INFO - Processing reports\REXP\10_Feb_202504_41_PM_Interim_Financial_Statements_as_at_31-12-2024.pdf
+2025-04-03 14:56:34,290 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\10_Feb_202504_41_PM_Interim_Financial_Statements_as_at_31-12-2024.pdf
+2025-04-03 14:56:34,290 - INFO - Text successfully extracted from relevant pages in reports\REXP\10_Feb_202504_41_PM_Interim_Financial_Statements_as_at_31-12-2024.pdf
+2025-04-03 14:56:34,290 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,295 - INFO - Extracted text written to reports\REXP\10_Feb_202504_41_PM_Interim_Financial_Statements_as_at_31-12-2024.txt
+2025-04-03 14:56:34,297 - INFO - Processing reports\REXP\11_Aug_202103_16_PM_Interim_Financial_Statements_-01st_Quarter_30th_June_2021.pdf
+2025-04-03 14:56:34,312 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\11_Aug_202103_16_PM_Interim_Financial_Statements_-01st_Quarter_30th_June_2021.pdf
+2025-04-03 14:56:34,312 - INFO - Text successfully extracted from relevant pages in reports\REXP\11_Aug_202103_16_PM_Interim_Financial_Statements_-01st_Quarter_30th_June_2021.pdf
+2025-04-03 14:56:34,312 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,316 - INFO - Extracted text written to reports\REXP\11_Aug_202103_16_PM_Interim_Financial_Statements_-01st_Quarter_30th_June_2021.txt
+2025-04-03 14:56:34,316 - INFO - Processing reports\REXP\11_Feb_202103_25_PM_Quarterly_Financial_Report_as_of_12_31_2020.pdf
+2025-04-03 14:56:34,334 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\11_Feb_202103_25_PM_Quarterly_Financial_Report_as_of_12_31_2020.pdf
+2025-04-03 14:56:34,334 - INFO - Text successfully extracted from relevant pages in reports\REXP\11_Feb_202103_25_PM_Quarterly_Financial_Report_as_of_12_31_2020.pdf
+2025-04-03 14:56:34,336 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,336 - INFO - Extracted text written to reports\REXP\11_Feb_202103_25_PM_Quarterly_Financial_Report_as_of_12_31_2020.txt
+2025-04-03 14:56:34,336 - INFO - Processing reports\REXP\12_Feb_202003_18_PM_Interim_Financial_Statements_as_at_31.12.2019.pdf
+2025-04-03 14:56:34,350 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\12_Feb_202003_18_PM_Interim_Financial_Statements_as_at_31.12.2019.pdf
+2025-04-03 14:56:34,350 - INFO - Text successfully extracted from relevant pages in reports\REXP\12_Feb_202003_18_PM_Interim_Financial_Statements_as_at_31.12.2019.pdf
+2025-04-03 14:56:34,350 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,357 - INFO - Extracted text written to reports\REXP\12_Feb_202003_18_PM_Interim_Financial_Statements_as_at_31.12.2019.txt
+2025-04-03 14:56:34,357 - INFO - Processing reports\REXP\12_Nov_202104_32_PM_Interim_Financial_Statements_as_of_30_09_2021.pdf
+2025-04-03 14:56:34,364 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\12_Nov_202104_32_PM_Interim_Financial_Statements_as_of_30_09_2021.pdf
+2025-04-03 14:56:34,364 - INFO - Text successfully extracted from relevant pages in reports\REXP\12_Nov_202104_32_PM_Interim_Financial_Statements_as_of_30_09_2021.pdf
+2025-04-03 14:56:34,364 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,385 - INFO - Extracted text written to reports\REXP\12_Nov_202104_32_PM_Interim_Financial_Statements_as_of_30_09_2021.txt
+2025-04-03 14:56:34,385 - INFO - Processing reports\REXP\13_Nov_202003_14_PM_Quarterly_Financial_Report_as_of_30_09_2020.pdf
+2025-04-03 14:56:34,406 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\13_Nov_202003_14_PM_Quarterly_Financial_Report_as_of_30_09_2020.pdf
+2025-04-03 14:56:34,406 - INFO - Text successfully extracted from relevant pages in reports\REXP\13_Nov_202003_14_PM_Quarterly_Financial_Report_as_of_30_09_2020.pdf
+2025-04-03 14:56:34,406 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,409 - INFO - Extracted text written to reports\REXP\13_Nov_202003_14_PM_Quarterly_Financial_Report_as_of_30_09_2020.txt
+2025-04-03 14:56:34,410 - INFO - Processing reports\REXP\14_Aug_202003_22_PM_Quarterly_Financial_Report_as_of_31_03_2020.pdf
+2025-04-03 14:56:34,419 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\14_Aug_202003_22_PM_Quarterly_Financial_Report_as_of_31_03_2020.pdf
+2025-04-03 14:56:34,419 - INFO - Text successfully extracted from relevant pages in reports\REXP\14_Aug_202003_22_PM_Quarterly_Financial_Report_as_of_31_03_2020.pdf
+2025-04-03 14:56:34,419 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,426 - INFO - Extracted text written to reports\REXP\14_Aug_202003_22_PM_Quarterly_Financial_Report_as_of_31_03_2020.txt
+2025-04-03 14:56:34,426 - INFO - Processing reports\REXP\14_Aug_202003_24_PM_Quarterly_Financial_Report_as_of_30_06_2020.pdf
+2025-04-03 14:56:34,442 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\14_Aug_202003_24_PM_Quarterly_Financial_Report_as_of_30_06_2020.pdf
+2025-04-03 14:56:34,442 - INFO - Text successfully extracted from relevant pages in reports\REXP\14_Aug_202003_24_PM_Quarterly_Financial_Report_as_of_30_06_2020.pdf
+2025-04-03 14:56:34,442 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,442 - INFO - Extracted text written to reports\REXP\14_Aug_202003_24_PM_Quarterly_Financial_Report_as_of_30_06_2020.txt
+2025-04-03 14:56:34,442 - INFO - Processing reports\REXP\14_Feb_202204_26_PM_Interim_Financial_Statements_-03rd_Quarter_2021_2022.pdf
+2025-04-03 14:56:34,454 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\14_Feb_202204_26_PM_Interim_Financial_Statements_-03rd_Quarter_2021_2022.pdf
+2025-04-03 14:56:34,454 - INFO - Text successfully extracted from relevant pages in reports\REXP\14_Feb_202204_26_PM_Interim_Financial_Statements_-03rd_Quarter_2021_2022.pdf
+2025-04-03 14:56:34,454 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,456 - INFO - Extracted text written to reports\REXP\14_Feb_202204_26_PM_Interim_Financial_Statements_-03rd_Quarter_2021_2022.txt
+2025-04-03 14:56:34,457 - INFO - Processing reports\REXP\14_Nov_202203_10_PM_Interim_Financial_Statement_Second_Quater_-2022_-RPE.pdf
+2025-04-03 14:56:34,468 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\14_Nov_202203_10_PM_Interim_Financial_Statement_Second_Quater_-2022_-RPE.pdf
+2025-04-03 14:56:34,468 - INFO - Text successfully extracted from relevant pages in reports\REXP\14_Nov_202203_10_PM_Interim_Financial_Statement_Second_Quater_-2022_-RPE.pdf
+2025-04-03 14:56:34,468 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,475 - INFO - Extracted text written to reports\REXP\14_Nov_202203_10_PM_Interim_Financial_Statement_Second_Quater_-2022_-RPE.txt
+2025-04-03 14:56:34,476 - INFO - Processing reports\REXP\15_Aug_202205_18_PM_Interim_Financial_Statements_as_of_30-06-2022.pdf
+2025-04-03 14:56:34,487 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\15_Aug_202205_18_PM_Interim_Financial_Statements_as_of_30-06-2022.pdf
+2025-04-03 14:56:34,488 - INFO - Text successfully extracted from relevant pages in reports\REXP\15_Aug_202205_18_PM_Interim_Financial_Statements_as_of_30-06-2022.pdf
+2025-04-03 14:56:34,488 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,488 - INFO - Extracted text written to reports\REXP\15_Aug_202205_18_PM_Interim_Financial_Statements_as_of_30-06-2022.txt
+2025-04-03 14:56:34,488 - INFO - Processing reports\REXP\15_Aug_202302_47_PM_Interim_Financial_Statement_First_Quater_-2023-_Richard_Pieris_Exports_PLC.pdf
+2025-04-03 14:56:34,525 - WARNING - No relevant pages found in reports\REXP\15_Aug_202302_47_PM_Interim_Financial_Statement_First_Quater_-2023-_Richard_Pieris_Exports_PLC.pdf.
+2025-04-03 14:56:34,532 - ERROR - No relevant text extracted from reports\REXP\15_Aug_202302_47_PM_Interim_Financial_Statement_First_Quater_-2023-_Richard_Pieris_Exports_PLC.pdf.
+2025-04-03 14:56:34,532 - INFO - Processing reports\REXP\15_Feb_202303_13_PM_Interim_Financial_Statement_Third_Quater_-2022_2023.pdf
+2025-04-03 14:56:34,545 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\15_Feb_202303_13_PM_Interim_Financial_Statement_Third_Quater_-2022_2023.pdf
+2025-04-03 14:56:34,546 - INFO - Text successfully extracted from relevant pages in reports\REXP\15_Feb_202303_13_PM_Interim_Financial_Statement_Third_Quater_-2022_2023.pdf
+2025-04-03 14:56:34,546 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,546 - INFO - Extracted text written to reports\REXP\15_Feb_202303_13_PM_Interim_Financial_Statement_Third_Quater_-2022_2023.txt
+2025-04-03 14:56:34,546 - INFO - Processing reports\REXP\15_Feb_202404_54_PM_Interim_Financial_Statements_as_at_31.12.2023.pdf
+2025-04-03 14:56:34,564 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\15_Feb_202404_54_PM_Interim_Financial_Statements_as_at_31.12.2023.pdf
+2025-04-03 14:56:34,564 - INFO - Text successfully extracted from relevant pages in reports\REXP\15_Feb_202404_54_PM_Interim_Financial_Statements_as_at_31.12.2023.pdf
+2025-04-03 14:56:34,564 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,567 - INFO - Extracted text written to reports\REXP\15_Feb_202404_54_PM_Interim_Financial_Statements_as_at_31.12.2023.txt
+2025-04-03 14:56:34,567 - INFO - Processing reports\REXP\15_Nov_202305_25_PM_Interim_Financial_Statements_as_at_30.09.2023.pdf
+2025-04-03 14:56:34,582 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\15_Nov_202305_25_PM_Interim_Financial_Statements_as_at_30.09.2023.pdf
+2025-04-03 14:56:34,584 - INFO - Text successfully extracted from relevant pages in reports\REXP\15_Nov_202305_25_PM_Interim_Financial_Statements_as_at_30.09.2023.pdf
+2025-04-03 14:56:34,584 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,585 - INFO - Extracted text written to reports\REXP\15_Nov_202305_25_PM_Interim_Financial_Statements_as_at_30.09.2023.txt
+2025-04-03 14:56:34,586 - INFO - Processing reports\REXP\31_Jul_202404_36_PM_Interim_Financial_Statements_as_at_30-06-2024.pdf
+2025-04-03 14:56:34,600 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\31_Jul_202404_36_PM_Interim_Financial_Statements_as_at_30-06-2024.pdf
+2025-04-03 14:56:34,601 - INFO - Text successfully extracted from relevant pages in reports\REXP\31_Jul_202404_36_PM_Interim_Financial_Statements_as_at_30-06-2024.pdf
+2025-04-03 14:56:34,601 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,602 - INFO - Extracted text written to reports\REXP\31_Jul_202404_36_PM_Interim_Financial_Statements_as_at_30-06-2024.txt
+2025-04-03 14:56:34,602 - INFO - Processing reports\REXP\31_May_202103_16_PM_Interim_Financial_Statements_-04th_Quarter.pdf
+2025-04-03 14:56:34,616 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\31_May_202103_16_PM_Interim_Financial_Statements_-04th_Quarter.pdf
+2025-04-03 14:56:34,616 - INFO - Text successfully extracted from relevant pages in reports\REXP\31_May_202103_16_PM_Interim_Financial_Statements_-04th_Quarter.pdf
+2025-04-03 14:56:34,616 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,622 - INFO - Extracted text written to reports\REXP\31_May_202103_16_PM_Interim_Financial_Statements_-04th_Quarter.txt
+2025-04-03 14:56:34,622 - INFO - Processing reports\REXP\31_May_202303_28_PM_Interim_Financial_Statement_Fourth_Quater_-2022_2023.pdf
+2025-04-03 14:56:34,638 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\31_May_202303_28_PM_Interim_Financial_Statement_Fourth_Quater_-2022_2023.pdf
+2025-04-03 14:56:34,638 - INFO - Text successfully extracted from relevant pages in reports\REXP\31_May_202303_28_PM_Interim_Financial_Statement_Fourth_Quater_-2022_2023.pdf
+2025-04-03 14:56:34,639 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,640 - INFO - Extracted text written to reports\REXP\31_May_202303_28_PM_Interim_Financial_Statement_Fourth_Quater_-2022_2023.txt
+2025-04-03 14:56:34,641 - INFO - Processing reports\REXP\31_May_202407_41_PM_Interim_Financial_Statements_as_at_31.03.2024.pdf
+2025-04-03 14:56:34,655 - INFO - First occurrence of target keywords found on page 4 of reports\REXP\31_May_202407_41_PM_Interim_Financial_Statements_as_at_31.03.2024.pdf
+2025-04-03 14:56:34,656 - INFO - Text successfully extracted from relevant pages in reports\REXP\31_May_202407_41_PM_Interim_Financial_Statements_as_at_31.03.2024.pdf
+2025-04-03 14:56:34,656 - INFO - Pages extracted: [4]
+2025-04-03 14:56:34,657 - INFO - Extracted text written to reports\REXP\31_May_202407_41_PM_Interim_Financial_Statements_as_at_31.03.2024.txt
+2025-04-03 14:56:34,657 - INFO - Fetching quarterly reports for DIPD (DIPD.N0000)...
+2025-04-03 14:56:34,657 - INFO - ====== WebDriver manager ======
+2025-04-03 14:56:35,717 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-03 14:56:36,858 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-03 14:56:37,002 - INFO - Driver [C:\Users\Akshila.Anurangi\.wdm\drivers\chromedriver\win64\134.0.6998.165\chromedriver-win32/chromedriver.exe] found in cache
+2025-04-03 14:56:56,328 - INFO - Found 20 PDF reports for DIPD.
+2025-04-03 14:56:57,964 - INFO - Downloaded: 10_Feb_202502_49_PM_Interim_Financial_Statements_as_at_31.12.2024.pdf
+2025-04-03 14:56:58,631 - INFO - Downloaded: 11_Nov_202404_08_PM_Quarterly_Financial_report_as_of_30-09-2024.pdf
+2025-04-03 14:56:59,276 - INFO - Downloaded: 08_Aug_202408_31_AM_Interim_Financial_Statements_as_of_30_06_2024.pdf
+2025-04-03 14:56:59,880 - INFO - Downloaded: 16_May_202403_23_PM_Quarterly_Financial_report_as_of_31_03_2024.pdf
+2025-04-03 14:57:06,010 - INFO - Downloaded: 12_Feb_202403_26_PM_Quarterly_Financial_report_as_of_31-12-2023.pdf
+2025-04-03 14:57:06,804 - INFO - Downloaded: 09_Nov_202303_34_PM_Quarterly_Financial_report_as_of_30-09-2023.pdf
+2025-04-03 14:57:07,483 - INFO - Downloaded: 09_Aug_202302_47_PM_Quarterly_Financial_report_as_of_30-06-2023.pdf
+2025-04-03 14:57:08,144 - INFO - Downloaded: 19_May_202308_36_AM_Quarterly_Financial_report_as_of_31-03-2023.pdf
+2025-04-03 14:57:09,932 - INFO - Downloaded: 13_Feb_202303_19_PM_Quarterly_Financial_report_as_of_31-12-2022.pdf
+2025-04-03 14:57:10,809 - INFO - Downloaded: 10_Nov_202208_51_AM_Quarterly_Financial_report_as_of_30-09-2022.pdf
+2025-04-03 14:57:13,972 - INFO - Downloaded: 09_Aug_202203_30_PM_Quarterly_Financial_report_as_of_30-06-2022.pdf
+2025-04-03 14:57:15,812 - INFO - Downloaded: 19_May_202203_12_PM_Quarterly_Financial_report_as_of_31-03-2022.pdf
+2025-04-03 14:57:16,455 - INFO - Downloaded: 10_Feb_202204_45_PM_Quarterly_Financial_report_as_of_31-12-2021.pdf
+2025-04-03 14:57:17,164 - INFO - Downloaded: 09_Nov_202104_13_PM_Quarterly_Financial_report_as_of_30-09-2021.pdf
+2025-04-03 14:57:17,733 - INFO - Downloaded: 12_Aug_202102_39_PM_Quarterly_Financial_report_as_of_30-06-2021.pdf
+2025-04-03 14:57:18,392 - INFO - Downloaded: 18_May_202103_06_PM_Quarterly_Financial_report_as_of_31-03-2021.pdf
+2025-04-03 14:57:19,030 - INFO - Downloaded: 11_Feb_202103_38_PM_Quarterly_Financial_report_as_of_31-12-2020.pdf
+2025-04-03 14:57:35,693 - INFO - Downloaded: 04_Nov_202003_04_PM_Quarterly_Financial_report_as_of_30-09-2020.pdf
+2025-04-03 14:57:36,369 - INFO - Downloaded: 12_Aug_202002_52_PM_Quarterly_Financial_report_as_of_30-06-2020.pdf
+2025-04-03 14:57:37,056 - INFO - Downloaded: 12_Jun_202004_14_PM_Interim_Financial_Statements_as_of_31_03_2020.pdf
+2025-04-03 14:57:37,557 - INFO - Processing PDFs in reports\DIPD
+2025-04-03 14:57:37,557 - INFO - Processing reports\DIPD\04_Nov_202003_04_PM_Quarterly_Financial_report_as_of_30-09-2020.pdf
+2025-04-03 14:57:37,576 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\04_Nov_202003_04_PM_Quarterly_Financial_report_as_of_30-09-2020.pdf
+2025-04-03 14:57:37,576 - INFO - Text successfully extracted from relevant pages in reports\DIPD\04_Nov_202003_04_PM_Quarterly_Financial_report_as_of_30-09-2020.pdf
+2025-04-03 14:57:37,578 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,580 - INFO - Extracted text written to reports\DIPD\04_Nov_202003_04_PM_Quarterly_Financial_report_as_of_30-09-2020.txt
+2025-04-03 14:57:37,580 - INFO - Processing reports\DIPD\08_Aug_202408_31_AM_Interim_Financial_Statements_as_of_30_06_2024.pdf
+2025-04-03 14:57:37,589 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\08_Aug_202408_31_AM_Interim_Financial_Statements_as_of_30_06_2024.pdf
+2025-04-03 14:57:37,589 - INFO - Text successfully extracted from relevant pages in reports\DIPD\08_Aug_202408_31_AM_Interim_Financial_Statements_as_of_30_06_2024.pdf
+2025-04-03 14:57:37,589 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,593 - INFO - Extracted text written to reports\DIPD\08_Aug_202408_31_AM_Interim_Financial_Statements_as_of_30_06_2024.txt
+2025-04-03 14:57:37,593 - INFO - Processing reports\DIPD\09_Aug_202203_30_PM_Quarterly_Financial_report_as_of_30-06-2022.pdf
+2025-04-03 14:57:37,605 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\09_Aug_202203_30_PM_Quarterly_Financial_report_as_of_30-06-2022.pdf
+2025-04-03 14:57:37,606 - INFO - Text successfully extracted from relevant pages in reports\DIPD\09_Aug_202203_30_PM_Quarterly_Financial_report_as_of_30-06-2022.pdf
+2025-04-03 14:57:37,606 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,608 - INFO - Extracted text written to reports\DIPD\09_Aug_202203_30_PM_Quarterly_Financial_report_as_of_30-06-2022.txt
+2025-04-03 14:57:37,609 - INFO - Processing reports\DIPD\09_Aug_202302_47_PM_Quarterly_Financial_report_as_of_30-06-2023.pdf
+2025-04-03 14:57:37,621 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\09_Aug_202302_47_PM_Quarterly_Financial_report_as_of_30-06-2023.pdf
+2025-04-03 14:57:37,621 - INFO - Text successfully extracted from relevant pages in reports\DIPD\09_Aug_202302_47_PM_Quarterly_Financial_report_as_of_30-06-2023.pdf
+2025-04-03 14:57:37,621 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,621 - INFO - Extracted text written to reports\DIPD\09_Aug_202302_47_PM_Quarterly_Financial_report_as_of_30-06-2023.txt
+2025-04-03 14:57:37,621 - INFO - Processing reports\DIPD\09_Nov_202104_13_PM_Quarterly_Financial_report_as_of_30-09-2021.pdf
+2025-04-03 14:57:37,634 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\09_Nov_202104_13_PM_Quarterly_Financial_report_as_of_30-09-2021.pdf
+2025-04-03 14:57:37,635 - INFO - Text successfully extracted from relevant pages in reports\DIPD\09_Nov_202104_13_PM_Quarterly_Financial_report_as_of_30-09-2021.pdf
+2025-04-03 14:57:37,635 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,636 - INFO - Extracted text written to reports\DIPD\09_Nov_202104_13_PM_Quarterly_Financial_report_as_of_30-09-2021.txt
+2025-04-03 14:57:37,637 - INFO - Processing reports\DIPD\09_Nov_202303_34_PM_Quarterly_Financial_report_as_of_30-09-2023.pdf
+2025-04-03 14:57:37,648 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\09_Nov_202303_34_PM_Quarterly_Financial_report_as_of_30-09-2023.pdf
+2025-04-03 14:57:37,649 - INFO - Text successfully extracted from relevant pages in reports\DIPD\09_Nov_202303_34_PM_Quarterly_Financial_report_as_of_30-09-2023.pdf
+2025-04-03 14:57:37,649 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,649 - INFO - Extracted text written to reports\DIPD\09_Nov_202303_34_PM_Quarterly_Financial_report_as_of_30-09-2023.txt
+2025-04-03 14:57:37,649 - INFO - Processing reports\DIPD\10_Feb_202204_45_PM_Quarterly_Financial_report_as_of_31-12-2021.pdf
+2025-04-03 14:57:37,662 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\10_Feb_202204_45_PM_Quarterly_Financial_report_as_of_31-12-2021.pdf
+2025-04-03 14:57:37,662 - INFO - Text successfully extracted from relevant pages in reports\DIPD\10_Feb_202204_45_PM_Quarterly_Financial_report_as_of_31-12-2021.pdf
+2025-04-03 14:57:37,662 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,662 - INFO - Extracted text written to reports\DIPD\10_Feb_202204_45_PM_Quarterly_Financial_report_as_of_31-12-2021.txt
+2025-04-03 14:57:37,662 - INFO - Processing reports\DIPD\10_Feb_202502_49_PM_Interim_Financial_Statements_as_at_31.12.2024.pdf
+2025-04-03 14:57:37,675 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\10_Feb_202502_49_PM_Interim_Financial_Statements_as_at_31.12.2024.pdf
+2025-04-03 14:57:37,675 - INFO - Text successfully extracted from relevant pages in reports\DIPD\10_Feb_202502_49_PM_Interim_Financial_Statements_as_at_31.12.2024.pdf
+2025-04-03 14:57:37,676 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,676 - INFO - Extracted text written to reports\DIPD\10_Feb_202502_49_PM_Interim_Financial_Statements_as_at_31.12.2024.txt
+2025-04-03 14:57:37,676 - INFO - Processing reports\DIPD\10_Nov_202208_51_AM_Quarterly_Financial_report_as_of_30-09-2022.pdf
+2025-04-03 14:57:37,688 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\10_Nov_202208_51_AM_Quarterly_Financial_report_as_of_30-09-2022.pdf
+2025-04-03 14:57:37,689 - INFO - Text successfully extracted from relevant pages in reports\DIPD\10_Nov_202208_51_AM_Quarterly_Financial_report_as_of_30-09-2022.pdf
+2025-04-03 14:57:37,689 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,691 - INFO - Extracted text written to reports\DIPD\10_Nov_202208_51_AM_Quarterly_Financial_report_as_of_30-09-2022.txt
+2025-04-03 14:57:37,691 - INFO - Processing reports\DIPD\11_Feb_202103_38_PM_Quarterly_Financial_report_as_of_31-12-2020.pdf
+2025-04-03 14:57:37,701 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\11_Feb_202103_38_PM_Quarterly_Financial_report_as_of_31-12-2020.pdf
+2025-04-03 14:57:37,702 - INFO - Text successfully extracted from relevant pages in reports\DIPD\11_Feb_202103_38_PM_Quarterly_Financial_report_as_of_31-12-2020.pdf
+2025-04-03 14:57:37,702 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,704 - INFO - Extracted text written to reports\DIPD\11_Feb_202103_38_PM_Quarterly_Financial_report_as_of_31-12-2020.txt
+2025-04-03 14:57:37,704 - INFO - Processing reports\DIPD\11_Nov_202404_08_PM_Quarterly_Financial_report_as_of_30-09-2024.pdf
+2025-04-03 14:57:37,711 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\11_Nov_202404_08_PM_Quarterly_Financial_report_as_of_30-09-2024.pdf
+2025-04-03 14:57:37,711 - INFO - Text successfully extracted from relevant pages in reports\DIPD\11_Nov_202404_08_PM_Quarterly_Financial_report_as_of_30-09-2024.pdf
+2025-04-03 14:57:37,711 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,715 - INFO - Extracted text written to reports\DIPD\11_Nov_202404_08_PM_Quarterly_Financial_report_as_of_30-09-2024.txt
+2025-04-03 14:57:37,715 - INFO - Processing reports\DIPD\12_Aug_202002_52_PM_Quarterly_Financial_report_as_of_30-06-2020.pdf
+2025-04-03 14:57:37,728 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\12_Aug_202002_52_PM_Quarterly_Financial_report_as_of_30-06-2020.pdf
+2025-04-03 14:57:37,728 - INFO - Text successfully extracted from relevant pages in reports\DIPD\12_Aug_202002_52_PM_Quarterly_Financial_report_as_of_30-06-2020.pdf
+2025-04-03 14:57:37,728 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,729 - INFO - Extracted text written to reports\DIPD\12_Aug_202002_52_PM_Quarterly_Financial_report_as_of_30-06-2020.txt
+2025-04-03 14:57:37,730 - INFO - Processing reports\DIPD\12_Aug_202102_39_PM_Quarterly_Financial_report_as_of_30-06-2021.pdf
+2025-04-03 14:57:37,743 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\12_Aug_202102_39_PM_Quarterly_Financial_report_as_of_30-06-2021.pdf
+2025-04-03 14:57:37,744 - INFO - Text successfully extracted from relevant pages in reports\DIPD\12_Aug_202102_39_PM_Quarterly_Financial_report_as_of_30-06-2021.pdf
+2025-04-03 14:57:37,744 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,745 - INFO - Extracted text written to reports\DIPD\12_Aug_202102_39_PM_Quarterly_Financial_report_as_of_30-06-2021.txt
+2025-04-03 14:57:37,745 - INFO - Processing reports\DIPD\12_Feb_202403_26_PM_Quarterly_Financial_report_as_of_31-12-2023.pdf
+2025-04-03 14:57:37,758 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\12_Feb_202403_26_PM_Quarterly_Financial_report_as_of_31-12-2023.pdf
+2025-04-03 14:57:37,758 - INFO - Text successfully extracted from relevant pages in reports\DIPD\12_Feb_202403_26_PM_Quarterly_Financial_report_as_of_31-12-2023.pdf
+2025-04-03 14:57:37,759 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,760 - INFO - Extracted text written to reports\DIPD\12_Feb_202403_26_PM_Quarterly_Financial_report_as_of_31-12-2023.txt
+2025-04-03 14:57:37,760 - INFO - Processing reports\DIPD\12_Jun_202004_14_PM_Interim_Financial_Statements_as_of_31_03_2020.pdf
+2025-04-03 14:57:37,770 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\12_Jun_202004_14_PM_Interim_Financial_Statements_as_of_31_03_2020.pdf
+2025-04-03 14:57:37,771 - INFO - Text successfully extracted from relevant pages in reports\DIPD\12_Jun_202004_14_PM_Interim_Financial_Statements_as_of_31_03_2020.pdf
+2025-04-03 14:57:37,771 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,773 - INFO - Extracted text written to reports\DIPD\12_Jun_202004_14_PM_Interim_Financial_Statements_as_of_31_03_2020.txt
+2025-04-03 14:57:37,773 - INFO - Processing reports\DIPD\13_Feb_202303_19_PM_Quarterly_Financial_report_as_of_31-12-2022.pdf
+2025-04-03 14:57:37,785 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\13_Feb_202303_19_PM_Quarterly_Financial_report_as_of_31-12-2022.pdf
+2025-04-03 14:57:37,785 - INFO - Text successfully extracted from relevant pages in reports\DIPD\13_Feb_202303_19_PM_Quarterly_Financial_report_as_of_31-12-2022.pdf
+2025-04-03 14:57:37,785 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,787 - INFO - Extracted text written to reports\DIPD\13_Feb_202303_19_PM_Quarterly_Financial_report_as_of_31-12-2022.txt
+2025-04-03 14:57:37,787 - INFO - Processing reports\DIPD\16_May_202403_23_PM_Quarterly_Financial_report_as_of_31_03_2024.pdf
+2025-04-03 14:57:37,795 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\16_May_202403_23_PM_Quarterly_Financial_report_as_of_31_03_2024.pdf
+2025-04-03 14:57:37,795 - INFO - Text successfully extracted from relevant pages in reports\DIPD\16_May_202403_23_PM_Quarterly_Financial_report_as_of_31_03_2024.pdf
+2025-04-03 14:57:37,795 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,798 - INFO - Extracted text written to reports\DIPD\16_May_202403_23_PM_Quarterly_Financial_report_as_of_31_03_2024.txt
+2025-04-03 14:57:37,798 - INFO - Processing reports\DIPD\18_May_202103_06_PM_Quarterly_Financial_report_as_of_31-03-2021.pdf
+2025-04-03 14:57:37,807 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\18_May_202103_06_PM_Quarterly_Financial_report_as_of_31-03-2021.pdf
+2025-04-03 14:57:37,808 - INFO - Text successfully extracted from relevant pages in reports\DIPD\18_May_202103_06_PM_Quarterly_Financial_report_as_of_31-03-2021.pdf
+2025-04-03 14:57:37,808 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,808 - INFO - Extracted text written to reports\DIPD\18_May_202103_06_PM_Quarterly_Financial_report_as_of_31-03-2021.txt
+2025-04-03 14:57:37,810 - INFO - Processing reports\DIPD\19_May_202203_12_PM_Quarterly_Financial_report_as_of_31-03-2022.pdf
+2025-04-03 14:57:37,819 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\19_May_202203_12_PM_Quarterly_Financial_report_as_of_31-03-2022.pdf
+2025-04-03 14:57:37,819 - INFO - Text successfully extracted from relevant pages in reports\DIPD\19_May_202203_12_PM_Quarterly_Financial_report_as_of_31-03-2022.pdf
+2025-04-03 14:57:37,820 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,822 - INFO - Extracted text written to reports\DIPD\19_May_202203_12_PM_Quarterly_Financial_report_as_of_31-03-2022.txt
+2025-04-03 14:57:37,823 - INFO - Processing reports\DIPD\19_May_202308_36_AM_Quarterly_Financial_report_as_of_31-03-2023.pdf
+2025-04-03 14:57:37,832 - INFO - First occurrence of target keywords found on page 3 of reports\DIPD\19_May_202308_36_AM_Quarterly_Financial_report_as_of_31-03-2023.pdf
+2025-04-03 14:57:37,833 - INFO - Text successfully extracted from relevant pages in reports\DIPD\19_May_202308_36_AM_Quarterly_Financial_report_as_of_31-03-2023.pdf
+2025-04-03 14:57:37,833 - INFO - Pages extracted: [3]
+2025-04-03 14:57:37,834 - INFO - Extracted text written to reports\DIPD\19_May_202308_36_AM_Quarterly_Financial_report_as_of_31-03-2023.txt

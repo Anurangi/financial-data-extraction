@@ -1,0 +1,39 @@
+# Configuration file for CSE Financial Report Scraper
+
+# Base URL for CSE company profiles
+base_url: "https://www.cse.lk/pages/company-profile/company-profile.component.html"
+
+# Web scraping settings
+browser_config:
+  headless: true
+  wait_timeouts:
+    financials_tab: 10
+    quarterly_tab_visibility: 3
+    quarterly_tab_clickable: 10
+    table_load: 5
+
+# XPath and CSS selectors
+selectors:
+  financials_tab: "//a[contains(text(), 'Financials')]"
+  quarterly_tab: "//a[contains(text(), 'Quarterly Reports')]"
+  table_rows: "tr"
+  title_div: "div.col-lg-10.col-md-10"
+
+# Report filtering settings
+report_filters:
+  keywords:
+    - "Interim Financial Statement"
+    - "Quarterly"
+  max_reports_per_company: 20
+
+# File download settings
+download_config:
+  save_dir: "reports"
+  filename_template: "{date} - {title}.pdf"
+  skip_existing: true
+
+# Company symbols and names
+companies:
+  "REXP.N0000": "REXP"
+  "DIPD.N0000": "DIPD"
+  # Add more companies as needed

@@ -9,7 +9,40 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import warnings
+import os
 warnings.filterwarnings('ignore')
+
+# Create output directories for figures
+def create_output_directories(base_dir="financial-data-extraction-pipeline"):
+    """
+    Create organized output directories for saving figures
+    """
+    # Create base output directory
+    output_dir = os.path.join(base_dir, "output")
+    
+    # Create subdirectories for different types of figures
+    eda_dir = os.path.join(output_dir, "eda")
+    time_series_dir = os.path.join(output_dir, "time_series")
+    forecasts_dir = os.path.join(output_dir, "forecasts")
+    models_dir = os.path.join(output_dir, "models")
+    
+    # Create company-specific directories for each company
+    companies_dir = os.path.join(output_dir, "companies")
+    
+    # Create directories if they don't exist
+    for directory in [output_dir, eda_dir, time_series_dir, forecasts_dir, models_dir, companies_dir]:
+        os.makedirs(directory, exist_ok=True)
+    
+    print(f"Created output directories under {output_dir}")
+    
+    return {
+        "base": output_dir,
+        "eda": eda_dir,
+        "time_series": time_series_dir,
+        "forecasts": forecasts_dir,
+        "models": models_dir,
+        "companies": companies_dir
+    }
 
 # Load and preprocess the data
 def load_data(file_path):
@@ -25,7 +58,7 @@ def load_data(file_path):
     return data
 
 # Exploratory Data Analysis
-def perform_eda(data):
+def perform_eda(data, output_dirs):
     # Basic info
     print("Data shape:", data.shape)
     print("\nCompanies in the dataset:", data['Company'].unique())
@@ -57,7 +90,7 @@ def perform_eda(data):
     plt.grid(True)
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('revenue_over_time.png')
+    plt.savefig(os.path.join(output_dirs['eda'], 'revenue_over_time.png'))
     
     # Profit margin over time
     plt.figure(figsize=(14, 8))
@@ -73,12 +106,16 @@ def perform_eda(data):
     plt.grid(True)
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('profit_margin_over_time.png')
+    plt.savefig(os.path.join(output_dirs['eda'], 'profit_margin_over_time.png'))
     
     return None
 
 # Time Series Analysis
-def analyze_time_series(data, company, target_variable):
+def analyze_time_series(data, company, target_variable, output_dirs):
+    # Create company directory if it doesn't exist
+    company_dir = os.path.join(output_dirs['companies'], company.replace(' ', '_'))
+    os.makedirs(company_dir, exist_ok=True)
+    
     # Filter data for the selected company
     company_data = data[data['Company'] == company].copy()
     
@@ -99,7 +136,7 @@ def analyze_time_series(data, company, target_variable):
     plt.ylabel(target_variable)
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig(f'{company}_{target_variable}_time_series.png')
+    plt.savefig(os.path.join(company_dir, f'{target_variable}_time_series.png'))
     
     # Seasonal Decomposition
     try:
@@ -124,14 +161,19 @@ def analyze_time_series(data, company, target_variable):
             plt.plot(decomposition.resid)
             plt.title('Residuals')
             plt.tight_layout()
-            plt.savefig(f'{company}_{target_variable}_decomposition.png')
-    except:
-        print(f"Could not perform seasonal decomposition for {company} {target_variable} - possibly insufficient data")
+            plt.savefig(os.path.join(company_dir, f'{target_variable}_decomposition.png'))
+    except Exception as e:
+        print(f"Could not perform seasonal decomposition for {company} {target_variable} - {str(e)}")
     
     return ts_data
 
 # Model building using SARIMA (manually specifying parameters instead of auto_arima)
-def build_sarima_model(ts_data, company, target_variable, forecast_periods=4):
+def build_sarima_model(ts_data, company, target_variable, output_dirs, forecast_periods=4):
+    # Create company directory if it doesn't exist
+    company_dir = os.path.join(output_dirs['companies'], company.replace(' ', '_'))
+    models_dir = os.path.join(company_dir, "models")
+    os.makedirs(models_dir, exist_ok=True)
+    
     # Split data into train and test sets
     train_size = int(len(ts_data) * 0.8)
     train, test = ts_data[:train_size], ts_data[train_size:]
@@ -182,7 +224,7 @@ def build_sarima_model(ts_data, company, target_variable, forecast_periods=4):
     plt.ylabel(target_variable)
     plt.legend()
     plt.grid(True)
-    plt.savefig(f'{company}_{target_variable}_predictions.png')
+    plt.savefig(os.path.join(models_dir, f'{target_variable}_sarima_predictions.png'))
     
     # Generate future forecasts
     future_forecast = results.get_forecast(steps=forecast_periods)
@@ -206,12 +248,25 @@ def build_sarima_model(ts_data, company, target_variable, forecast_periods=4):
     plt.ylabel(target_variable)
     plt.legend()
     plt.grid(True)
-    plt.savefig(f'{company}_{target_variable}_forecast.png')
+    plt.savefig(os.path.join(output_dirs['forecasts'], f'{company.replace(" ", "_")}_{target_variable}_sarima_forecast.png'))
+    
+    # Save model summary
+    with open(os.path.join(models_dir, f'{target_variable}_sarima_summary.txt'), 'w') as f:
+        f.write(str(results.summary()))
+        f.write(f"\n\nTest Set Metrics:\n")
+        f.write(f"MSE: {mse}\n")
+        f.write(f"RMSE: {rmse}\n")
+        f.write(f"MAE: {mae}\n")
     
     return results, future_forecast_mean, forecast_index
 
 # Model building using Exponential Smoothing
-def build_ets_model(ts_data, company, target_variable, forecast_periods=4):
+def build_ets_model(ts_data, company, target_variable, output_dirs, forecast_periods=4):
+    # Create company directory if it doesn't exist
+    company_dir = os.path.join(output_dirs['companies'], company.replace(' ', '_'))
+    models_dir = os.path.join(company_dir, "models")
+    os.makedirs(models_dir, exist_ok=True)
+    
     # Split data into train and test sets
     train_size = int(len(ts_data) * 0.8)
     train, test = ts_data[:train_size], ts_data[train_size:]
@@ -249,7 +304,7 @@ def build_ets_model(ts_data, company, target_variable, forecast_periods=4):
     plt.ylabel(target_variable)
     plt.legend()
     plt.grid(True)
-    plt.savefig(f'{company}_{target_variable}_ets_predictions.png')
+    plt.savefig(os.path.join(models_dir, f'{target_variable}_ets_predictions.png'))
     
     # Generate future forecasts
     future_forecast = results.forecast(forecast_periods)
@@ -268,12 +323,25 @@ def build_ets_model(ts_data, company, target_variable, forecast_periods=4):
     plt.ylabel(target_variable)
     plt.legend()
     plt.grid(True)
-    plt.savefig(f'{company}_{target_variable}_ets_forecast.png')
+    plt.savefig(os.path.join(output_dirs['forecasts'], f'{company.replace(" ", "_")}_{target_variable}_ets_forecast.png'))
+    
+    # Save model summary
+    with open(os.path.join(models_dir, f'{target_variable}_ets_summary.txt'), 'w') as f:
+        f.write(f"ETS Model Parameters: {results.params}\n\n")
+        f.write(f"Test Set Metrics:\n")
+        f.write(f"MSE: {mse}\n")
+        f.write(f"RMSE: {rmse}\n")
+        f.write(f"MAE: {mae}\n")
     
     return results, future_forecast, forecast_index
 
 # Compare multiple forecasting models
-def compare_models(ts_data, company, target_variable):
+def compare_models(ts_data, company, target_variable, output_dirs):
+    # Create company directory if it doesn't exist
+    company_dir = os.path.join(output_dirs['companies'], company.replace(' ', '_'))
+    comparison_dir = os.path.join(company_dir, "model_comparison")
+    os.makedirs(comparison_dir, exist_ok=True)
+    
     # Split data into train and test sets
     train_size = int(len(ts_data) * 0.8)
     train, test = ts_data[:train_size], ts_data[train_size:]
@@ -281,6 +349,7 @@ def compare_models(ts_data, company, target_variable):
     # List to store model results
     model_predictions = {}
     model_mse = {}
+    model_errors = {}
     
     # 1. SARIMA model
     try:
@@ -296,13 +365,16 @@ def compare_models(ts_data, company, target_variable):
         sarima_results = sarima_model.fit(disp=False)
         sarima_pred = sarima_results.get_forecast(steps=len(test)).predicted_mean
         sarima_mse = mean_squared_error(test, sarima_pred)
+        sarima_rmse = np.sqrt(sarima_mse)
+        sarima_mae = mean_absolute_error(test, sarima_pred)
         
         model_predictions['SARIMA'] = sarima_pred
         model_mse['SARIMA'] = sarima_mse
+        model_errors['SARIMA'] = {'MSE': sarima_mse, 'RMSE': sarima_rmse, 'MAE': sarima_mae}
         
         print(f"SARIMA MSE: {sarima_mse:.2f}")
-    except:
-        print("Could not fit SARIMA model")
+    except Exception as e:
+        print(f"Could not fit SARIMA model: {str(e)}")
     
     # 2. ETS model
     try:
@@ -315,13 +387,16 @@ def compare_models(ts_data, company, target_variable):
         ets_results = ets_model.fit()
         ets_pred = ets_results.forecast(len(test))
         ets_mse = mean_squared_error(test, ets_pred)
+        ets_rmse = np.sqrt(ets_mse)
+        ets_mae = mean_absolute_error(test, ets_pred)
         
         model_predictions['ETS'] = ets_pred
         model_mse['ETS'] = ets_mse
+        model_errors['ETS'] = {'MSE': ets_mse, 'RMSE': ets_rmse, 'MAE': ets_mae}
         
         print(f"ETS MSE: {ets_mse:.2f}")
-    except:
-        print("Could not fit ETS model")
+    except Exception as e:
+        print(f"Could not fit ETS model: {str(e)}")
     
     # 3. Simple ARIMA model
     try:
@@ -329,13 +404,16 @@ def compare_models(ts_data, company, target_variable):
         arima_results = arima_model.fit()
         arima_pred = arima_results.forecast(steps=len(test))
         arima_mse = mean_squared_error(test, arima_pred)
+        arima_rmse = np.sqrt(arima_mse)
+        arima_mae = mean_absolute_error(test, arima_pred)
         
         model_predictions['ARIMA'] = arima_pred
         model_mse['ARIMA'] = arima_mse
+        model_errors['ARIMA'] = {'MSE': arima_mse, 'RMSE': arima_rmse, 'MAE': arima_mae}
         
         print(f"ARIMA MSE: {arima_mse:.2f}")
-    except:
-        print("Could not fit ARIMA model")
+    except Exception as e:
+        print(f"Could not fit ARIMA model: {str(e)}")
     
     # Plot and compare results
     if model_predictions:
@@ -351,26 +429,44 @@ def compare_models(ts_data, company, target_variable):
         plt.ylabel(target_variable)
         plt.legend()
         plt.grid(True)
-        plt.savefig(f'{company}_{target_variable}_model_comparison.png')
+        plt.savefig(os.path.join(comparison_dir, f'{target_variable}_model_comparison.png'))
         
-        # Determine the best model
-        if model_mse:
-            best_model = min(model_mse.items(), key=lambda x: x[1])
-            print(f"\nBest model for {company} {target_variable}: {best_model[0]} with MSE {best_model[1]:.2f}")
-            return best_model[0]
+        # Save comparison results to file
+        with open(os.path.join(comparison_dir, f'{target_variable}_model_comparison.txt'), 'w') as f:
+            f.write(f"Model Comparison for {target_variable} - {company}\n")
+            f.write("="*50 + "\n\n")
+            
+            for model_name, errors in model_errors.items():
+                f.write(f"{model_name}:\n")
+                for metric, value in errors.items():
+                    f.write(f"  {metric}: {value:.4f}\n")
+                f.write("\n")
+            
+            # Determine the best model
+            if model_mse:
+                best_model = min(model_mse.items(), key=lambda x: x[1])
+                f.write(f"\nBest model: {best_model[0]} with MSE {best_model[1]:.4f}\n")
+                print(f"\nBest model for {company} {target_variable}: {best_model[0]} with MSE {best_model[1]:.2f}")
+                return best_model[0]
     
     return None
 
 # Main execution function
 def main():
+    # Base directory for the pipeline
+    base_dir = r"C:\Users\Akshila.Anurangi\financial-data-extraction-pipeline"
+    
+    # Create output directories
+    output_dirs = create_output_directories(base_dir)
+    
     # Path to the data file
-    file_path = r"C:\Users\Akshila.Anurangi\financial-data-extraction-pipeline\reports\unified_financial_data.csv"
+    file_path = os.path.join(base_dir, "reports", "unified_financial_data.csv")
     
     # Load data
     data = load_data(file_path)
     
     # Perform EDA
-    perform_eda(data)
+    perform_eda(data, output_dirs)
     
     # Select companies and variables to forecast
     companies = data['Company'].unique()
@@ -389,17 +485,17 @@ def main():
             print(f"{'='*50}")
             
             # Time series analysis
-            ts_data = analyze_time_series(data, company, variable)
+            ts_data = analyze_time_series(data, company, variable, output_dirs)
             
             if len(ts_data) >= 8:  # Need minimum data points for meaningful forecast
                 # Compare models to find the best one
-                best_model_name = compare_models(ts_data, company, variable)
+                best_model_name = compare_models(ts_data, company, variable, output_dirs)
                 
                 # Build forecast with the best model or default to SARIMA if comparison failed
                 if best_model_name == 'ETS':
-                    model, future_forecast, forecast_index = build_ets_model(ts_data, company, variable)
+                    model, future_forecast, forecast_index = build_ets_model(ts_data, company, variable, output_dirs)
                 else:  # Default to SARIMA
-                    model, future_forecast, forecast_index = build_sarima_model(ts_data, company, variable)
+                    model, future_forecast, forecast_index = build_sarima_model(ts_data, company, variable, output_dirs)
                 
                 # Store forecasts
                 company_forecasts[variable] = {
@@ -411,7 +507,25 @@ def main():
         
         forecasts[company] = company_forecasts
     
+    # Save forecast results to CSV
+    for company, company_forecasts in forecasts.items():
+        company_dir = os.path.join(output_dirs['companies'], company.replace(' ', '_'))
+        
+        for variable, forecast_data in company_forecasts.items():
+            # Create DataFrame from forecast data
+            forecast_df = pd.DataFrame({
+                'Date': forecast_data['forecast_dates'],
+                f'{variable} Forecast': forecast_data['forecast_values']
+            })
+            
+            # Save to CSV
+            forecast_df.to_csv(
+                os.path.join(company_dir, f'{variable}_forecast.csv'),
+                index=False
+            )
+    
     print("\nForecasting process completed!")
+    print(f"All output files saved to {output_dirs['base']}")
     return forecasts
 
 # Call main function

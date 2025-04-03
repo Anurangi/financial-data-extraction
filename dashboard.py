@@ -1,74 +1,321 @@
 import pandas as pd
-import dash
-from dash import dcc, html
 import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import dash
+from dash import dcc, html, Input, Output, State
+from dash.dash_table import DataTable
+import dash_bootstrap_components as dbc
+import numpy as np
+from datetime import datetime
 
-# Load CSV file
-df = pd.read_csv(r'C:\Users\Akshila.Anurangi\financial-data-extraction-pipeline\reports\unified_financial_data.csv')
+# Load data
+data = pd.read_csv(r'C:\Users\Akshila.Anurangi\financial-data-extraction-pipeline\reports\unified_financial_data.csv')
 
-# Convert 'Quarter End Date' to datetime format
-df['Quarter End Date'] = pd.to_datetime(df['Quarter End Date'])
+# Data preprocessing
+data['Quarter End Date'] = pd.to_datetime(data['Quarter End Date'])
+data['Year'] = data['Quarter End Date'].dt.year
+data['Quarter'] = data['Quarter End Date'].dt.quarter
+data['Year-Quarter'] = data['Year'].astype(str) + '-Q' + data['Quarter'].astype(str)
 
-# Ensure data is sorted properly
-df = df.sort_values('Quarter End Date')
+# Calculate additional metrics
+data['Gross Margin %'] = (data['Gross Profit'] / data['Revenue']) * 100
+data['Net Margin %'] = (data['Profit for Period'] / data['Revenue']) * 100
+data['Operating Margin %'] = ((data['Revenue'] + data['Other Income'] + data['Distribution Costs'] + 
+                             data['Administrative Expenses']) / data['Revenue']) * 100
 
-# Calculate KPIs
-total_revenue = df['Revenue'].sum()
-average_profit = df['Profit for Period'].mean()
-gross_profit_margin = (df['Gross Profit'].sum() / total_revenue) * 100 if total_revenue else 0
+# Handle missing values
+data = data.fillna(0)
 
-# Initialize Dash app
-app = dash.Dash(__name__)
+# Initialize the Dash app
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-# Revenue Over Time (Improved)
-revenue_fig = px.line(
-    df, x='Quarter End Date', y='Revenue', color='Company',
-    title='Revenue Over Time',
-    template='plotly_dark', markers=True, line_shape='spline'
+# Define available metrics for dropdown
+metric_options = [
+    {'label': 'Revenue', 'value': 'Revenue'},
+    {'label': 'Gross Profit', 'value': 'Gross Profit'},
+    {'label': 'Profit for Period', 'value': 'Profit for Period'},
+    {'label': 'Gross Margin %', 'value': 'Gross Margin %'},
+    {'label': 'Net Margin %', 'value': 'Net Margin %'},
+    {'label': 'Operating Margin %', 'value': 'Operating Margin %'}
+]
+
+# Define layout
+app.layout = dbc.Container([
+    dbc.Row([
+        dbc.Col(html.H1("Financial Performance Dashboard", 
+                        style={'textAlign': 'center', 'color': '#2C3E50', 'marginTop': 20}), 
+                width=12)
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            html.Div([
+                html.H4("Filters", style={'marginTop': 10}),
+                html.Label("Select Company:"),
+                dcc.Dropdown(
+                    id='company-filter',
+                    options=[{'label': company, 'value': company} for company in data['Company'].unique()],
+                    value=data['Company'].unique().tolist(),
+                    multi=True
+                ),
+                html.Label("Select Year Range:"),
+                dcc.RangeSlider(
+                    id='year-slider',
+                    min=data['Year'].min(),
+                    max=data['Year'].max(),
+                    step=1,
+                    marks={str(year): str(year) for year in range(data['Year'].min(), data['Year'].max()+1)},
+                    value=[data['Year'].min(), data['Year'].max()]
+                ),
+                html.Label("Select Metric:"),
+                dcc.Dropdown(
+                    id='metric-dropdown',
+                    options=metric_options,
+                    value='Revenue',
+                    clearable=False
+                ),
+                html.Label("Comparison Mode:"),
+                dcc.RadioItems(
+                    id='comparison-mode',
+                    options=[
+                        {'label': 'Quarter over Quarter', 'value': 'qoq'},
+                        {'label': 'Year over Year', 'value': 'yoy'}
+                    ],
+                    value='qoq',
+                    labelStyle={'display': 'block'}
+                )
+            ], style={'padding': '20px', 'backgroundColor': '#f8f9fa', 'borderRadius': '5px'})
+        ], width=3),
+        
+        dbc.Col([
+            dbc.Card([
+                dbc.CardHeader(html.H4("Key Performance Indicators", className="card-title")),
+                dbc.CardBody(id='kpi-cards')
+            ], style={'marginBottom': '20px'}),
+            
+            dbc.Card([
+                dbc.CardHeader(html.H4("Quarterly Trend Analysis", className="card-title")),
+                dbc.CardBody([
+                    dcc.Graph(id='quarterly-trend')
+                ])
+            ], style={'marginBottom': '20px'})
+        ], width=9)
+    ]),
+    
+    dbc.Row([
+        dbc.Col([
+            dbc.Card([
+                dbc.CardHeader(html.H4("Company Comparison", className="card-title")),
+                dbc.CardBody([
+                    dcc.Graph(id='company-comparison')
+                ])
+            ])
+        ], width=6),
+        
+        dbc.Col([
+            dbc.Card([
+                dbc.CardHeader(html.H4("Profitability Analysis", className="card-title")),
+                dbc.CardBody([
+                    dcc.Graph(id='profitability-analysis')
+                ])
+            ])
+        ], width=6)
+    ], style={'marginTop': '20px'}),
+    
+    dbc.Row([
+        dbc.Col([
+            dbc.Card([
+                dbc.CardHeader(html.H4("Financial Data Table", className="card-title")),
+                dbc.CardBody([
+                    html.Div(id='data-table-container')
+                ])
+            ])
+        ], width=12)
+    ], style={'marginTop': '20px', 'marginBottom': '40px'})
+    
+], fluid=True)
+
+# Define callbacks
+@app.callback(
+    [Output('kpi-cards', 'children'),
+     Output('quarterly-trend', 'figure'),
+     Output('company-comparison', 'figure'),
+     Output('profitability-analysis', 'figure'),
+     Output('data-table-container', 'children')],
+    [Input('company-filter', 'value'),
+     Input('year-slider', 'value'),
+     Input('metric-dropdown', 'value'),
+     Input('comparison-mode', 'value')]
 )
+def update_dashboard(companies, year_range, selected_metric, comparison_mode):
+    if not isinstance(companies, list):
+        companies = [companies]
+        
+    # Filter data based on selections
+    filtered_data = data[
+        (data['Company'].isin(companies)) & 
+        (data['Year'] >= year_range[0]) & 
+        (data['Year'] <= year_range[1])
+    ]
+    
+    # Generate KPI cards
+    latest_year = filtered_data['Year'].max()
+    latest_quarter = filtered_data[filtered_data['Year'] == latest_year]['Quarter'].max()
+    
+    latest_data = filtered_data[
+        (filtered_data['Year'] == latest_year) & 
+        (filtered_data['Quarter'] == latest_quarter)
+    ]
+    
+    kpi_cards = []
+    for company in companies:
+        company_latest = latest_data[latest_data['Company'] == company]
+        if not company_latest.empty:
+            # Get previous year data for comparison
+            prev_year_data = data[
+                (data['Company'] == company) & 
+                (data['Year'] == latest_year - 1) & 
+                (data['Quarter'] == latest_quarter)
+            ]
+            
+            revenue_current = company_latest['Revenue'].values[0]
+            gross_profit_current = company_latest['Gross Profit'].values[0]
+            net_profit_current = company_latest['Profit for Period'].values[0]
+            
+            revenue_previous = prev_year_data['Revenue'].values[0] if not prev_year_data.empty else 0
+            revenue_change = ((revenue_current - revenue_previous) / revenue_previous * 100) if revenue_previous != 0 else 0
+            
+            card = dbc.Card([
+                dbc.CardBody([
+                    html.H5(company, className="card-title"),
+                    html.Div([
+                        html.Div([
+                            html.P("Revenue", className="card-text"),
+                            html.H3(f"{revenue_current:,.0f}", className="card-text"),
+                            html.P(f"{revenue_change:.1f}% YoY", 
+                                 style={'color': 'green' if revenue_change > 0 else 'red'})
+                        ], style={'width': '33%', 'display': 'inline-block'}),
+                        html.Div([
+                            html.P("Gross Profit", className="card-text"),
+                            html.H3(f"{gross_profit_current:,.0f}", className="card-text"),
+                        ], style={'width': '33%', 'display': 'inline-block'}),
+                        html.Div([
+                            html.P("Net Profit", className="card-text"),
+                            html.H3(f"{net_profit_current:,.0f}", className="card-text"),
+                        ], style={'width': '33%', 'display': 'inline-block'})
+                    ])
+                ])
+            ], style={'marginBottom': '10px'})
+            
+            kpi_cards.append(card)
+    
+    # Quarterly trend analysis
+    if comparison_mode == 'qoq':
+        quarterly_df = filtered_data.sort_values(['Company', 'Year', 'Quarter'])
+        fig_trend = px.line(quarterly_df, x='Year-Quarter', y=selected_metric, color='Company',
+                         title=f'Quarterly {selected_metric} Trend',
+                         labels={selected_metric: selected_metric, 'Year-Quarter': 'Year-Quarter'},
+                         markers=True)
+        
+    else:  # year over year comparison
+        # Pivot data to compare quarters across years
+        pivot_df = filtered_data.pivot_table(
+            index=['Company', 'Quarter'], 
+            columns='Year', 
+            values=selected_metric,
+            aggfunc='sum'
+        ).reset_index()
+        
+        fig_trend = make_subplots(rows=1, cols=1, shared_xaxes=True)
+        
+        for company in companies:
+            company_data = pivot_df[pivot_df['Company'] == company]
+            for year in range(year_range[0], year_range[1] + 1):
+                if year in company_data.columns:
+                    fig_trend.add_trace(
+                        go.Scatter(
+                            x=company_data['Quarter'],
+                            y=company_data[year],
+                            mode='lines+markers',
+                            name=f"{company} - {year}"
+                        )
+                    )
+        
+        fig_trend.update_layout(
+            title=f'Year over Year {selected_metric} Comparison by Quarter',
+            xaxis_title='Quarter',
+            yaxis_title=selected_metric,
+            legend_title='Company - Year'
+        )
+    
+    # Company comparison bar chart
+    comparison_df = filtered_data.groupby(['Company', 'Year'])[selected_metric].sum().reset_index()
+    fig_comparison = px.bar(comparison_df, x='Year', y=selected_metric, color='Company', barmode='group',
+                         title=f'Annual {selected_metric} Comparison',
+                         labels={selected_metric: selected_metric, 'Year': 'Year'})
+    
+    # Profitability analysis
+    profitability_df = filtered_data.copy()
+    if 'Margin' not in selected_metric:  # Only create this plot for non-margin metrics
+        profitability_metrics = ['Gross Margin %', 'Net Margin %', 'Operating Margin %']
+        profitability_df = profitability_df.melt(
+            id_vars=['Company', 'Year', 'Quarter', 'Year-Quarter'],
+            value_vars=profitability_metrics,
+            var_name='Margin Type',
+            value_name='Margin Percentage'
+        )
+        fig_profitability = px.line(profitability_df, x='Year-Quarter', y='Margin Percentage', 
+                                 color='Company', line_dash='Margin Type',
+                                 title='Profitability Margin Trends',
+                                 labels={'Margin Percentage': 'Percentage (%)', 'Year-Quarter': 'Year-Quarter'})
+    else:
+        # If a margin metric is selected in the main trend, show expense breakdown instead
+        expense_df = filtered_data.copy()
+        expense_cols = ['Cost of Sales', 'Distribution Costs', 'Administrative Expenses', 'Other Expenses']
+        # Convert to absolute values for better visualization
+        for col in expense_cols:
+            expense_df[col] = expense_df[col].abs()
+            
+        expense_df = expense_df.melt(
+            id_vars=['Company', 'Year', 'Quarter', 'Year-Quarter'],
+            value_vars=expense_cols,
+            var_name='Expense Type',
+            value_name='Amount'
+        )
+        fig_profitability = px.area(expense_df, x='Year-Quarter', y='Amount', color='Expense Type',
+                                 facet_row='Company', 
+                                 title='Expense Breakdown Analysis',
+                                 labels={'Amount': 'Amount', 'Year-Quarter': 'Year-Quarter'})
+    
+    # Data table
+    table_data = filtered_data[['Company', 'Year', 'Quarter', 'Revenue', 'Gross Profit', 
+                              'Profit for Period', 'Gross Margin %', 'Net Margin %']]
+    table = DataTable(
+        columns=[{"name": i, "id": i} for i in table_data.columns],
+        data=table_data.to_dict('records'),
+        filter_action="native",
+        sort_action="native",
+        sort_mode="multi",
+        page_size=10,
+        style_table={'overflowX': 'auto'},
+        style_header={
+            'backgroundColor': 'rgb(230, 230, 230)',
+            'fontWeight': 'bold'
+        },
+        style_cell={
+            'textAlign': 'left',
+            'padding': '10px'
+        },
+        style_data_conditional=[
+            {
+                'if': {'row_index': 'odd'},
+                'backgroundColor': 'rgb(248, 248, 248)'
+            }
+        ]
+    )
+    
+    return kpi_cards, fig_trend, fig_comparison, fig_profitability, table
 
-# Profit for Period Over Time (Now a Line Chart)
-profit_fig = px.line(
-    df, x='Quarter End Date', y='Profit for Period', color='Company',
-    title='Profit for Period Over Time',
-    template='plotly_dark', markers=True, line_shape='spline'
-)
-
-# Gross Profit Per Quarter (Bar Chart)
-gross_profit_fig = px.bar(
-    df, x='Quarter End Date', y='Gross Profit', color='Company',
-    title='Gross Profit Per Quarter',
-    template='plotly_dark'
-)
-
-# Layout with KPI Cards
-app.layout = html.Div([
-    html.H1("📊 Financial Dashboard", style={'text-align': 'center'}),
-
-    # KPI Cards
-    html.Div([
-        html.Div([
-            html.H3("💰 Total Revenue"),
-            html.P(f"${total_revenue:,.2f}", style={'font-size': '20px', 'font-weight': 'bold'})
-        ], style={'padding': '20px', 'border': '1px solid #ddd', 'border-radius': '10px', 'text-align': 'center', 'background-color': '#222', 'color': 'white'}),
-
-        html.Div([
-            html.H3("📈 Avg. Profit for Period"),
-            html.P(f"${average_profit:,.2f}", style={'font-size': '20px', 'font-weight': 'bold'})
-        ], style={'padding': '20px', 'border': '1px solid #ddd', 'border-radius': '10px', 'text-align': 'center', 'background-color': '#222', 'color': 'white'}),
-
-        html.Div([
-            html.H3("📊 Gross Profit Margin"),
-            html.P(f"{gross_profit_margin:.2f}%", style={'font-size': '20px', 'font-weight': 'bold'})
-        ], style={'padding': '20px', 'border': '1px solid #ddd', 'border-radius': '10px', 'text-align': 'center', 'background-color': '#222', 'color': 'white'}),
-    ], style={'display': 'flex', 'justify-content': 'space-around', 'margin-bottom': '20px'}),
-
-    # Graphs
-    dcc.Graph(figure=revenue_fig),
-    dcc.Graph(figure=profit_fig),
-    dcc.Graph(figure=gross_profit_fig),
-])
-
-# Run app
 if __name__ == '__main__':
     app.run(debug=True)

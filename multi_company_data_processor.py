@@ -199,8 +199,8 @@ def process_company_files(company_type, api_key):
 
 def main():
     # Replace with your OpenAI API key
-    api_key = "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"
-    
+    api_key = os.environ.get("OPENAI_API_KEY")
+    print(api_key)
     # Process both company types
     print("Processing DIPD files...")
     process_company_files("DIPD", api_key)

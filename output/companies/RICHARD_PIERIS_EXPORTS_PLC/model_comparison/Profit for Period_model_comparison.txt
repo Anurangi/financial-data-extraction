@@ -1,0 +1,15 @@
+Model Comparison for Profit for Period - RICHARD PIERIS EXPORTS PLC
+==================================================
+
+SARIMA:
+  MSE: 1100634703959.8955
+  RMSE: 1049111.3878
+  MAE: 972614.3434
+
+ARIMA:
+  MSE: 61122433739.1918
+  RMSE: 247229.5163
+  MAE: 235058.8054
+
+
+Best model: ARIMA with MSE 61122433739.1918

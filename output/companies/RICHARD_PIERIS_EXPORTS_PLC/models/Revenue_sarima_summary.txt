@@ -1,0 +1,32 @@
+                                     SARIMAX Results                                     
+=========================================================================================
+Dep. Variable:                           Revenue   No. Observations:                   15
+Model:             SARIMAX(1, 1, 1)x(1, 1, 1, 4)   Log Likelihood                 -57.428
+Date:                           Thu, 03 Apr 2025   AIC                            124.855
+Time:                                   14:15:42   BIC                            121.787
+Sample:                                        0   HQIC                           118.121
+                                            - 15                                         
+Covariance Type:                             opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1         -0.0473      2e+04  -2.36e-06      1.000   -3.93e+04    3.93e+04
+ma.L1          0.8196   1757.714      0.000      1.000   -3444.237    3445.876
+ar.S.L4       -0.8392   6703.041     -0.000      1.000   -1.31e+04    1.31e+04
+ma.S.L4        0.2400   6365.162   3.77e-05      1.000   -1.25e+04    1.25e+04
+sigma2        4.7e+11      0.000   1.86e+15      0.000     4.7e+11     4.7e+11
+===================================================================================
+Ljung-Box (L1) (Q):                   0.70   Jarque-Bera (JB):                 0.56
+Prob(Q):                              0.40   Prob(JB):                         0.76
+Heteroskedasticity (H):                nan   Skew:                            -0.14
+Prob(H) (two-sided):                   nan   Kurtosis:                         1.19
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
+[2] Covariance matrix is singular or near-singular, with condition number 1.47e+31. Standard errors may be unstable.
+
+Test Set Metrics:
+MSE: 468742366541.0375
+RMSE: 684647.6221685412
+MAE: 613702.268080812
