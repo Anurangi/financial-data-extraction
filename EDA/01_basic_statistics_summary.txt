@@ -1,0 +1,45 @@
+Financial Data EDA Summary
+Dataset Shape: (39, 18)
+
+Date Range: 2019-12-31 to 2024-12-31
+
+Companies in Dataset: 2
+Companies: DIPPED PRODUCTS PLC, RICHARD PIERIS EXPORTS PLC
+
+Basic Statistics:
+                              count          mean           std         min          25%        50%         75%         max
+Revenue                        39.0  1.661607e+07  2.131537e+07    875553.0   1728399.50  7332733.0  20036871.5  80099311.0
+Cost of Sales                  39.0 -1.309016e+07  1.643702e+07 -60490240.0 -16140350.50 -6179902.0  -1218597.5   -608048.0
+Gross Profit                   39.0  3.698106e+06  4.935097e+06    243147.0    450074.50  1032840.0   4436468.5  19609071.0
+Other Income                   39.0  1.141260e+05  3.436605e+05  -1402795.0      6014.50    13743.0    161074.5    833407.0
+Distribution Costs             39.0 -6.765274e+05  9.164122e+05  -4803655.0   -695675.50  -348559.0   -198877.5    -52059.0
+Administrative Expenses        39.0 -1.500543e+06  2.088485e+06  -8193104.0  -2103458.50  -706458.0    -79054.0    -40471.0
+Other Expenses                  8.0 -4.968236e+05  9.008965e+05  -1956362.0   -510601.25   -13956.0     -4822.0      3500.0
+Finance Income                 39.0  6.056017e+05  1.419768e+06      3751.0     15486.50    50741.0    359987.0   7596775.0
+Finance Costs                  39.0 -1.769776e+05  6.295702e+05  -1466345.0   -387554.50   -45721.0     -9756.0   2943626.0
+Profit Before Tax              39.0  2.013597e+06  3.012272e+06  -1185975.0    221389.00   391886.0   1771644.5  11218691.0
+Tax Expense                    39.0 -2.564094e+05  1.256120e+06  -2716267.0   -540321.50  -157198.0    -30966.0   6410800.0
+Profit for Period              39.0  1.769871e+06  2.484673e+06   -247433.0    178873.00   719991.0   1931956.0   8502424.0
+Other Financial Items          19.0  2.714242e+04  1.870947e+05   -297377.0    -14410.00     5483.0     39983.5    690836.0
+Share of Profit of Associate   19.0 -3.863105e+03  2.827910e+03     -9117.0     -5246.50    -4370.0     -2058.5      3493.0
+Profit from Operations         19.0  1.746797e+05  1.438492e+05    -26507.0     53720.00   200947.0    273328.0    458611.0
+
+Missing Values:
+Company                          0
+Filename                         0
+Quarter End Date                 0
+Revenue                          0
+Cost of Sales                    0
+Gross Profit                     0
+Other Income                     0
+Distribution Costs               0
+Administrative Expenses          0
+Other Expenses                  31
+Finance Income                   0
+Finance Costs                    0
+Profit Before Tax                0
+Tax Expense                      0
+Profit for Period                0
+Other Financial Items           20
+Share of Profit of Associate    20
+Profit from Operations          20

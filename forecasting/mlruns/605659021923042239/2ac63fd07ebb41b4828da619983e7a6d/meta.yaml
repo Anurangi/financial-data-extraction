@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/forecasting/mlruns/605659021923042239/2ac63fd07ebb41b4828da619983e7a6d/artifacts
+end_time: 1743745398770
+entry_point_name: ''
+experiment_id: '605659021923042239'
+lifecycle_stage: active
+run_id: 2ac63fd07ebb41b4828da619983e7a6d
+run_name: combined_forecasts_20250404
+run_uuid: 2ac63fd07ebb41b4828da619983e7a6d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743745398736
+status: 3
+tags: []
+user_id: Akshila.Anurangi

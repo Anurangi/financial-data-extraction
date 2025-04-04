@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/forecasting/mlruns/605659021923042239/a91721d2ffd64f408e4ab7b70f4772bc/artifacts
+end_time: 1743745398724
+entry_point_name: ''
+experiment_id: '605659021923042239'
+lifecycle_stage: active
+run_id: a91721d2ffd64f408e4ab7b70f4772bc
+run_name: RICHARD PIERIS EXPORTS PLC_forecast
+run_uuid: a91721d2ffd64f408e4ab7b70f4772bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743745395460
+status: 3
+tags: []
+user_id: Akshila.Anurangi

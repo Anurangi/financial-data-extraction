@@ -1,0 +1,71 @@
+Statistical Tests Results
+
+T-Tests comparing DIPPED PRODUCTS PLC vs RICHARD PIERIS EXPORTS PLC
+--------------------------------------------------
+Revenue:
+  DIPPED PRODUCTS PLC Mean: $30,659,132.20
+  RICHARD PIERIS EXPORTS PLC Mean: $1,833,898.16
+  t-statistic: 5.8678
+  p-value: 0.0000
+  Significant Difference: Yes
+
+Gross Profit:
+  DIPPED PRODUCTS PLC Mean: $6,751,436.65
+  RICHARD PIERIS EXPORTS PLC Mean: $484,073.68
+  t-statistic: 5.2437
+  p-value: 0.0000
+  Significant Difference: Yes
+
+Profit Before Tax:
+  DIPPED PRODUCTS PLC Mean: $3,727,335.60
+  RICHARD PIERIS EXPORTS PLC Mean: $209,661.37
+  t-statistic: 4.5775
+  p-value: 0.0002
+  Significant Difference: Yes
+
+Profit for Period:
+  DIPPED PRODUCTS PLC Mean: $3,287,463.75
+  RICHARD PIERIS EXPORTS PLC Mean: $172,404.26
+  t-statistic: 5.1289
+  p-value: 0.0001
+  Significant Difference: Yes
+
+
+ANOVA Tests for Quarterly Performance
+--------------------------------------------------
+Revenue:
+  Q1 Mean: $29,841,973.67
+  Q2 Mean: $10,143,855.44
+  Q3 Mean: $10,322,011.10
+  Q4 Mean: $16,812,194.18
+  F-statistic: 1.8363
+  p-value: 0.1586
+  Significant Difference: No
+
+Gross Profit:
+  Q1 Mean: $6,882,259.22
+  Q2 Mean: $2,179,966.78
+  Q3 Mean: $2,149,207.80
+  Q4 Mean: $3,743,092.82
+  F-statistic: 2.0098
+  p-value: 0.1305
+  Significant Difference: No
+
+Profit Before Tax:
+  Q1 Mean: $3,799,917.67
+  Q2 Mean: $1,610,115.78
+  Q3 Mean: $827,000.50
+  Q4 Mean: $1,960,906.55
+  F-statistic: 1.7196
+  p-value: 0.1808
+  Significant Difference: No
+
+Profit for Period:
+  Q1 Mean: $2,980,010.67
+  Q2 Mean: $1,263,450.78
+  Q3 Mean: $1,368,977.90
+  Q4 Mean: $1,558,547.64
+  F-statistic: 0.9455
+  p-value: 0.4292
+  Significant Difference: No
+

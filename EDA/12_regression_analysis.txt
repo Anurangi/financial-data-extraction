@@ -1,0 +1,69 @@
+Regression Analysis Results
+
+Predicting 'Profit for Period' using Revenue and Cost of Sales
+----------------------------------------------------------------------
+
+Company: DIPPED PRODUCTS PLC
+Number of observations: 20
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      Profit for Period   R-squared:                       0.683
+Model:                            OLS   Adj. R-squared:                  0.645
+Method:                 Least Squares   F-statistic:                     18.28
+Date:                Fri, 04 Apr 2025   Prob (F-statistic):           5.80e-05
+Time:                        11:31:46   Log-Likelihood:                -312.59
+No. Observations:                  20   AIC:                             631.2
+Df Residuals:                      17   BIC:                             634.2
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const         -2.272e+05   6.85e+05     -0.332      0.744   -1.67e+06    1.22e+06
+Revenue          -0.2516      0.145     -1.730      0.102      -0.559       0.055
+Cost of Sales    -0.4632      0.194     -2.388      0.029      -0.872      -0.054
+==============================================================================
+Omnibus:                       14.597   Durbin-Watson:                   2.652
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               13.498
+Skew:                           1.531   Prob(JB):                      0.00117
+Kurtosis:                       5.612   Cond. No.                     9.01e+07
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 9.01e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Company: RICHARD PIERIS EXPORTS PLC
+Number of observations: 19
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:      Profit for Period   R-squared:                       0.670
+Model:                            OLS   Adj. R-squared:                  0.629
+Method:                 Least Squares   F-statistic:                     16.27
+Date:                Fri, 04 Apr 2025   Prob (F-statistic):           0.000139
+Time:                        11:31:46   Log-Likelihood:                -252.12
+No. Observations:                  19   AIC:                             510.2
+Df Residuals:                      16   BIC:                             513.1
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const         -1.374e+05   1.12e+05     -1.230      0.237   -3.74e+05    9.94e+04
+Revenue           1.2565      0.221      5.675      0.000       0.787       1.726
+Cost of Sales     1.4777      0.262      5.649      0.000       0.923       2.032
+==============================================================================
+Omnibus:                       10.397   Durbin-Watson:                   1.619
+Prob(Omnibus):                  0.006   Jarque-Bera (JB):                7.924
+Skew:                          -1.165   Prob(JB):                       0.0190
+Kurtosis:                       5.141   Cond. No.                     7.75e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.75e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+

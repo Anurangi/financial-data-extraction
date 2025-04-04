@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/forecasting/mlruns/605659021923042239/4313e8c35d444876971f3f042658d0a8/artifacts
+end_time: 1743745395449
+entry_point_name: ''
+experiment_id: '605659021923042239'
+lifecycle_stage: active
+run_id: 4313e8c35d444876971f3f042658d0a8
+run_name: DIPPED PRODUCTS PLC_forecast
+run_uuid: 4313e8c35d444876971f3f042658d0a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743745390758
+status: 3
+tags: []
+user_id: Akshila.Anurangi
