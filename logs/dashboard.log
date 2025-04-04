@@ -1,0 +1,30 @@
+2025-04-04 10:15:17,849 - __main__ - INFO - Dashboard application starting...
+2025-04-04 10:15:17,849 - __main__ - INFO - Loading data from: C:\Users\Akshila.Anurangi\financial-data-extraction-pipeline\dataset_creator\data\unified_financial_data.csv
+2025-04-04 10:15:17,856 - __main__ - INFO - Data loaded successfully. Shape: (39, 18)
+2025-04-04 10:15:17,856 - __main__ - INFO - Processing data...
+2025-04-04 10:15:17,863 - __main__ - INFO - Data processing completed
+2025-04-04 10:15:17,863 - __main__ - INFO - Initializing Dash application...
+2025-04-04 10:15:17,886 - __main__ - INFO - Dashboard layout created successfully
+2025-04-04 10:15:17,886 - __main__ - INFO - Starting Dash server...
+2025-04-04 10:15:17,886 - dash.dash - INFO - Dash is running on http://127.0.0.1:8050/
+
+2025-04-04 10:15:18,832 - __main__ - INFO - Dashboard application starting...
+2025-04-04 10:15:18,832 - __main__ - INFO - Loading data from: C:\Users\Akshila.Anurangi\financial-data-extraction-pipeline\dataset_creator\data\unified_financial_data.csv
+2025-04-04 10:15:18,832 - __main__ - INFO - Data loaded successfully. Shape: (39, 18)
+2025-04-04 10:15:18,832 - __main__ - INFO - Processing data...
+2025-04-04 10:15:18,850 - __main__ - INFO - Data processing completed
+2025-04-04 10:15:18,850 - __main__ - INFO - Initializing Dash application...
+2025-04-04 10:15:18,865 - __main__ - INFO - Dashboard layout created successfully
+2025-04-04 10:15:18,865 - __main__ - INFO - Starting Dash server...
+2025-04-04 10:15:36,812 - __main__ - INFO - Updating dashboard with: companies=['DIPPED PRODUCTS PLC', 'RICHARD PIERIS EXPORTS PLC'], year_range=[2019, 2024], metric=Revenue, mode=qoq
+2025-04-04 10:15:37,538 - __main__ - INFO - Dashboard update completed successfully
+2025-04-04 10:15:52,962 - __main__ - INFO - Updating dashboard with: companies=['DIPPED PRODUCTS PLC', 'RICHARD PIERIS EXPORTS PLC'], year_range=[2020, 2024], metric=Revenue, mode=qoq
+2025-04-04 10:15:53,151 - __main__ - INFO - Dashboard update completed successfully
+2025-04-04 10:15:55,970 - __main__ - INFO - Updating dashboard with: companies=['DIPPED PRODUCTS PLC', 'RICHARD PIERIS EXPORTS PLC'], year_range=[2019, 2024], metric=Revenue, mode=qoq
+2025-04-04 10:15:56,206 - __main__ - INFO - Dashboard update completed successfully
+2025-04-04 10:15:57,870 - __main__ - INFO - Updating dashboard with: companies=['DIPPED PRODUCTS PLC', 'RICHARD PIERIS EXPORTS PLC'], year_range=[2019, 2024], metric=Revenue, mode=yoy
+2025-04-04 10:15:58,072 - __main__ - INFO - Dashboard update completed successfully
+2025-04-04 10:16:04,797 - __main__ - INFO - Updating dashboard with: companies=['DIPPED PRODUCTS PLC', 'RICHARD PIERIS EXPORTS PLC'], year_range=[2019, 2024], metric=Revenue, mode=qoq
+2025-04-04 10:16:05,006 - __main__ - INFO - Dashboard update completed successfully
+2025-04-04 10:28:54,911 - __main__ - INFO - Dash server stopped
+2025-04-04 10:28:55,022 - __main__ - INFO - Dash server stopped

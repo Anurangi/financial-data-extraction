@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/2209f2896bae4885925c9e790a169242/artifacts
+end_time: 1743686001572
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 2209f2896bae4885925c9e790a169242
+run_name: Company_RICHARD_PIERIS_EXPORTS_PLC
+run_uuid: 2209f2896bae4885925c9e790a169242
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685994841
+status: 3
+tags: []
+user_id: Akshila.Anurangi

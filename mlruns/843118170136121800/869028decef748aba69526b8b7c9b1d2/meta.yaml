@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/869028decef748aba69526b8b7c9b1d2/artifacts
+end_time: 1743685994137
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 869028decef748aba69526b8b7c9b1d2
+run_name: ModelComparison_DIPPED_PRODUCTS_PLC_Profit for Period
+run_uuid: 869028decef748aba69526b8b7c9b1d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685993442
+status: 3
+tags: []
+user_id: Akshila.Anurangi

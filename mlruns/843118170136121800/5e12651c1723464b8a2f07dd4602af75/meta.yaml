@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/5e12651c1723464b8a2f07dd4602af75/artifacts
+end_time: 1743685873574
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 5e12651c1723464b8a2f07dd4602af75
+run_name: Company_DIPPED_PRODUCTS_PLC
+run_uuid: 5e12651c1723464b8a2f07dd4602af75
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685866389
+status: 3
+tags: []
+user_id: Akshila.Anurangi

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/1c29e99c34ca4eeeae6dcb58870abfc6/artifacts
+end_time: 1743685876239
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 1c29e99c34ca4eeeae6dcb58870abfc6
+run_name: SARIMA_RICHARD_PIERIS_EXPORTS_PLC_Revenue
+run_uuid: 1c29e99c34ca4eeeae6dcb58870abfc6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685875432
+status: 3
+tags: []
+user_id: Akshila.Anurangi

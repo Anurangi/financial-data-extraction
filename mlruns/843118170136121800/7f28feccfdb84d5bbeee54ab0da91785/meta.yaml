@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/7f28feccfdb84d5bbeee54ab0da91785/artifacts
+end_time: 1743685871033
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 7f28feccfdb84d5bbeee54ab0da91785
+run_name: ETS_DIPPED_PRODUCTS_PLC_Gross Profit
+run_uuid: 7f28feccfdb84d5bbeee54ab0da91785
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685870340
+status: 3
+tags: []
+user_id: Akshila.Anurangi

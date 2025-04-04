@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/8ad7955087774fd9953406ec55f145dd/artifacts
+end_time: 1743685990170
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 8ad7955087774fd9953406ec55f145dd
+run_name: SARIMA_DIPPED_PRODUCTS_PLC_Revenue
+run_uuid: 8ad7955087774fd9953406ec55f145dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685989508
+status: 3
+tags: []
+user_id: Akshila.Anurangi

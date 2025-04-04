@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Akshila.Anurangi/financial-data-extraction-pipeline/mlruns/843118170136121800/572bcc939b2e4fe2a6d05ffa78738cee/artifacts
+end_time: 1743685878040
+entry_point_name: ''
+experiment_id: '843118170136121800'
+lifecycle_stage: active
+run_id: 572bcc939b2e4fe2a6d05ffa78738cee
+run_name: ModelComparison_RICHARD_PIERIS_EXPORTS_PLC_Gross Profit
+run_uuid: 572bcc939b2e4fe2a6d05ffa78738cee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1743685877302
+status: 3
+tags: []
+user_id: Akshila.Anurangi

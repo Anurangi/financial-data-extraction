@@ -1,0 +1,44 @@
+Financial Data Forecasting - Summary Report
+==================================================
+
+Run Date: 2025-04-03 16:06:03
+MLflow Run ID: 17e56970b09b4a6fa5dd2c3b16002b0b
+
+Companies Analyzed:
+- DIPPED PRODUCTS PLC
+- RICHARD PIERIS EXPORTS PLC
+
+Variables Forecasted:
+- Revenue
+- Gross Profit
+- Profit for Period
+
+Forecast Summary by Company:
+
+DIPPED PRODUCTS PLC:
+  Revenue:
+    - Latest Historical Value: -53970
+    - Forecast Range: 80930733.5118075 to 407008132.426598
+    - Average Forecast: 204365525.50
+  Gross Profit:
+    - Latest Historical Value: -53970
+    - Forecast Range: 5007504.3459464265 to 12703197.573055755
+    - Average Forecast: 8968868.67
+  Profit for Period:
+    - Latest Historical Value: -53970
+    - Forecast Range: 4184634.0879724887 to 10562921.869581081
+    - Average Forecast: 7627064.16
+
+RICHARD PIERIS EXPORTS PLC:
+  Revenue:
+    - Latest Historical Value: -53970
+    - Forecast Range: 1912640.1625817923 to 2805461.429630447
+    - Average Forecast: 2338504.73
+  Gross Profit:
+    - Latest Historical Value: -53970
+    - Forecast Range: 470781.33906352875 to 994808.5536239576
+    - Average Forecast: 639518.65
+  Profit for Period:
+    - Latest Historical Value: -53970
+    - Forecast Range: -716552.0082999425 to 1505221.4812761918
+    - Average Forecast: 612123.34

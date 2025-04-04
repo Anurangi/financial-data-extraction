@@ -3,7 +3,7 @@
 Dep. Variable:                 Profit for Period   No. Observations:                   16
 Model:             SARIMAX(1, 1, 1)x(1, 1, 1, 4)   Log Likelihood                 -80.097
 Date:                           Thu, 03 Apr 2025   AIC                            170.194
-Time:                                   14:15:41   BIC                            168.241
+Time:                                   16:06:00   BIC                            168.241
 Sample:                               03-31-2020   HQIC                           164.953
                                     - 12-31-2023                                         
 Covariance Type:                             opg                                         

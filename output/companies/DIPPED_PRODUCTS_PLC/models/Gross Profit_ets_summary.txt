@@ -1,6 +1,6 @@
-ETS Model Parameters: {'smoothing_level': np.float64(3.5102030869527484e-08), 'smoothing_trend': np.float64(3.07664656110782e-08), 'smoothing_seasonal': np.float64(3.338314598305192e-08), 'damping_trend': nan, 'initial_level': np.float64(87.39558980314129), 'initial_trend': np.float64(0.9585005142219354), 'initial_seasons': array([  8.9129784 ,  -8.8089278 , -12.11897117,   5.6718844 ]), 'use_boxcox': True, 'lamda': np.float64(0.19008119458798634), 'remove_bias': False}
+ETS Model Parameters: {'smoothing_level': np.float64(1.4901161193847656e-08), 'smoothing_trend': np.float64(2.435567737909776e-10), 'smoothing_seasonal': np.float64(0.0), 'damping_trend': nan, 'initial_level': np.float64(24.83659811891404), 'initial_trend': np.float64(0.10759199885915298), 'initial_seasons': array([ 0.32717555, -0.9403862 , -1.45804005,  1.08409192]), 'use_boxcox': True, 'lamda': np.float64(0.06181863593848967), 'remove_bias': False}
 
 Test Set Metrics:
-MSE: 24715055785131.574
-RMSE: 4971423.919274192
-MAE: 3884926.132250911
+MSE: 37359109949166.16
+RMSE: 6112209.907158471
+MAE: 4739199.037639372
