@@ -1,6 +1,0 @@
-ETS Model Parameters: {'smoothing_level': np.float64(1.4901161193847656e-08), 'smoothing_trend': np.float64(2.435567737909776e-10), 'smoothing_seasonal': np.float64(0.0), 'damping_trend': nan, 'initial_level': np.float64(24.83659811891404), 'initial_trend': np.float64(0.10759199885915298), 'initial_seasons': array([ 0.32717555, -0.9403862 , -1.45804005,  1.08409192]), 'use_boxcox': True, 'lamda': np.float64(0.06181863593848967), 'remove_bias': False}
-
-Test Set Metrics:
-MSE: 37359109949166.16
-RMSE: 6112209.907158471
-MAE: 4739199.037639372
